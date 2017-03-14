@@ -117,6 +117,7 @@ body{
 .home-footer-body-text{
     font-size: 15px;
     opacity: 0.8;
+    font-weight: 300px;
 }
 
 .home-footer-body-text > a {
