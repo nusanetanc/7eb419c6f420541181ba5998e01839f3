@@ -6,10 +6,6 @@ var api = express.Router();
 router.get('/', function(req, res, next) {
   res.render('homepage', { title: 'Groovy - Home' });
 });
-api.get('/', function(req, res, next) {
-  res.render('homepage', { title: 'Groovy - Home' });
-});
-
 
 router.get('/features', function(req, res, next) {
   res.render('features', { title: 'Groovy - Features' });
