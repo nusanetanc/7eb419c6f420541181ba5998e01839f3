@@ -14,6 +14,7 @@
 
     <!-- Style css -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
     <script>
       $(document).ready(function(){
         var name,email, message;
@@ -21,7 +22,7 @@
           name=$("#name").val();
           email=$("#email").val();
           message=$("#message").val();
-          $.post("https://dgfdg-nurhandiyudi.c9users.io/postcontact",{name: name,email: name,message: message}, function(data){
+          $.post("https://dgfdg-nurhandiyudi.c9users.io/postcontact",{name: name,email: email,message: message}, function(data){
             if(data==='done')
               {
                 alert("Terkirim");
