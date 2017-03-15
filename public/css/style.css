@@ -78,9 +78,9 @@ body{
 
 .btn-subscribe:hover {
     color: #fff;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
 
 .wall-home-content{
