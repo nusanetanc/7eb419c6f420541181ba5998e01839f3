@@ -40,10 +40,6 @@ router.get('/email-verification', function(req, res, next) {
 });
 
 router.get('/signup', function(req, res, next) {
-  res.render('signup-beta', { title: 'Groovy - Signup' });
-});
-
-router.get('/signup/**', function(req, res, next) {
   res.render('signup', { title: 'Groovy - Signup' });
 });
 
@@ -67,53 +63,8 @@ router.get('/terms-of-use', function(req, res, next) {
   res.render('coming-soon', { title: 'Groovy - Terms-of-use' });
 });
 
-/* GET is groovy. */
-
-router.get('/is', function(req, res, next) {
-  res.render('is', { title: 'Groovy - IS' });
-});
-
-router.get('/is/**', function(req, res, next) {
-  res.render('is', { title: 'Groovy - IS' });
-});
-
-/* GET is groovy. */
-
-router.get('/my', function(req, res, next) {
-  res.render('my', { title: 'Groovy - MY' });
-});
-
-router.get('/my/**', function(req, res, next) {
-  res.render('my', { title: 'Groovy - MY' });
-});
-
-
-router.get('/dashboard', function(req, res, next) {
-  res.render('./dashboard/index', { title: 'Groovy - Dashboard' });
-});
-
-router.get('/dashboard/allsubscribers', function(req, res, next) {
-  res.render('./dashboard/allsubscribers', { title: 'Groovy - Dashboard' });
-});
-
-router.get('/dashboard/reports', function(req, res, next) {
-  res.render('./dashboard/reports', { title: 'Groovy - Dashboard' });
-});
-
-router.get('/dashboard/information', function(req, res, next) {
-  res.render('./dashboard/information', { title: 'Groovy - Dashboard' });
-});
-
-router.get('/dashboard/newsubscribers', function(req, res, next) {
-  res.render('./dashboard/newsubscribers', { title: 'Groovy - Dashboard' });
-});
-
-router.get('/public', function(req, res, next) {
-  res.render('index', {title: 'Groovy'});
-});
-
-router.get('/public/**', function(req, res, next) {
-  res.render('index', {title: 'Groovy'});
+router.get('/**', function(req, res, next) {
+  res.render('coming-soon', { title: 'Groovy - Terms-of-use' });
 });
 
 module.exports = router;
