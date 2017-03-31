@@ -64,6 +64,7 @@ body{
 .wall-title{
     font-size: 35px;
     line-height: 50px;
+    font-weight: 100;
 }
 
 .btn-subscribe{
@@ -73,7 +74,17 @@ body{
     border-radius: 0px;
     border: 0;
     vertical-align: middle;
-    padding: 20px 20px 20px 20px;
+    padding: 13px 20px 13px 20px;
+}
+
+.btn-subscribe:hover{
+    text-decoration: none;
+    background-color: #fc3e1b;
+    color: white;
+    border-radius: 0px;
+    border: 0;
+    vertical-align: middle;
+    padding: 13px 20px 13px 20px;
 }
 
 .wall-home-content{
@@ -89,6 +100,7 @@ body{
 .wall-content-title{
     font-size: 38px;
     color: #fc592e;
+    font-weight: 100;
 }
 
 .wall-home-content-2{
@@ -116,7 +128,7 @@ body{
 
 .home-footer-body-text{
     font-size: 15px;
-    font-weight: 300px;
+    font-weight: 300 !important;
 }
 
 .home-footer-body-text > a {
@@ -124,11 +136,12 @@ body{
 }
 
 .home-footer-body-text > a:hover {
-    text-decoration: none;
+
 }
 
 .home-content-text{
     font-size: 18px;
+    font-weight:300;
 }
 
 .footer-home{
@@ -242,6 +255,39 @@ body{
 /*-------------------- End Form Authentication -------------------------*/
 
 
+/*---------------------- About ---------------------*/
+.wall-about{
+    height:400px;
+    margin-bottom: 0px;
+}
+
+.about-title{
+    font-size: 24px;
+}
+
+.wall-about-content{
+    background-color: #fff;
+    margin-bottom: 0px;
+}
+
+.about-content-text{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.wall-about-content-title{
+    font-size:38px;
+    color: #333;
+    font-weight:300;
+}
+
+.about-content{
+    padding-bottom: 50px;
+}
+
+/*--------------------/End About ---------------------*/
+
+
 /*---------------------- Package ---------------------*/
 .wall-package{
 background-image:url(../images/package-groovy.png);
@@ -283,13 +329,24 @@ color: #ea442d;
 }
 
 .price-box-header-level{
-background-color: #ea442d;
+    background-color: #fff;
+    border-top:1px solid #ea442d;
+    border-bottom:1px solid #ea442d;
+    color: #ea442d;
     font-size: 20px;
     font-weight: 200;
-    color: #fff;
     text-align: center;
     padding: 15px 0 15px 0;
 }
+
+#price-box-container:hover > #price-box-header-level {
+
+
+    background-color: #ea442d;
+    color: #fff;
+
+}
+
 .package-most-popular{
     background-size: 121px;
     background-image: url(../images/most-popular.png);
@@ -373,6 +430,8 @@ border-radius: 4px;
 vertical-align: middle;
 padding: 11px 20px 11px 20px;
 width: 50%;
+transition: 0.2s all;
+-moz-transition: 0.2s all;
 }
 .price-box-btn-subscribe:hover{
 background-color: #ea442d;
@@ -410,7 +469,9 @@ color: #ea442d;
 
 .tv-list-text{
 font-size: 15px;
+font-weight: 300 !important;
 }
+
 /*--------------------/End Package ---------------------*/
 
 /*----------------------- Sign Up --------------------------*/
@@ -490,20 +551,31 @@ font-size: 14px;
 
 /*----------------------- provide.html --------------------------*/
 .jumbotron > .container > .row > .col-md-12 > p {
-font-size: 14px;
-margin-bottom: 30px;
-text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .row > .col-md-4 > form > div > input {
-background-color: #f0f0f0;
-border: none;
-border-radius: 0px;
-font-size:14px;
-height: 70px;
-margin: 0 0 20px 0;
-padding: 22px 0px 26px 20px;
-width: 100%;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 0px;
+    font-size:14px;
+    height: 45px;
+    margin: 0 0 20px 0;
+    padding: 22px 0px 26px 20px;
+    width: 100%;
+}
+
+.formInput  {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 0px;
+    font-size:14px;
+    height: 45px;
+    margin: 0 0 20px 0;
+    padding: 22px 0px 26px 20px;
+    width: 100%;
 }
 
 .row > .col-md-4 > form > div > p {
@@ -555,6 +627,7 @@ margin-bottom: 20px;
 
 .wall-features-text{
     font-size: 18px !important;
+    font-weight: 300 !important;
 }
 
 .features-content1{
@@ -580,6 +653,19 @@ margin-bottom: 20px;
 
 .wall-content{
     margin-top:100px;
+}
+.wall-content-hashtag{
+    font-size:68px;
+    color:#fff;
+    font-weight:200;
+    background-color: #fc592e;
+    padding:150px 0 155px 0;
+    text-align:center;
+    color:#fff;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-image:url(../images/background-connectinghome.png);
+    background-position:center
 }
 
 .features-content2-title{
@@ -689,7 +775,6 @@ margin-bottom: 20px;
 }
 
 .support-link-contact:hover{
-    text-decoration: none;
     color: #000;
 }
 /*----------------------------/support-----------------------------------*/
@@ -799,6 +884,19 @@ margin-bottom: 20px;
 
 /*----------------------------/privacy-policy-----------------------------------*/
 
+
+/*---------------------------coming soon-----------------------------*/
+.coming-soon{
+    text-align: center;
+    padding: 250px 0 250px 0;
+}
+
+.coming-soon > h1{
+    color: #c1c1c1;
+}
+
+/*---------------------------/coming soon-----------------------------*/
+
 @media only screen and (max-width : 768px){
     .container-auth{
         width:90%;
@@ -822,6 +920,11 @@ margin-bottom: 20px;
 
     .wall-title {
         font-size: 28px;
+    }
+    
+    .wall-content-hashtag{
+        font-size:35px;
+        padding:80px 0 85px 0;
     }
 
     .home-content-text{

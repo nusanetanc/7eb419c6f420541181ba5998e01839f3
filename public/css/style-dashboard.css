@@ -28,9 +28,9 @@ hr {
 /*--- Sidebar ---*/
 
 .navbar-right {
-    margin-right: 35px;
-    margin-top: 17px;
-}
+     margin-right: 35px;
+     margin-top: 17px;
+ }
 
 .name {
     margin-top: 20px;
@@ -67,7 +67,7 @@ hr {
 }
 
 #sidebar-wrapper {
-    background: #E3471C;
+    background: #383838;
     height: 100%;
     left: 250px;
     margin-left: -250px;
@@ -113,20 +113,17 @@ hr {
 
 .sidebar-nav > li {
     line-height: 40px;
-    text-indent: 20px;
-}
-
-.sidebar-nav > li > a {
-    color: #F4B5A4;
-    display: block;
-    font-size: 13px;
-    margin-left: -30px;
-    text-decoration: none;
+    text-indent: 5px;
 }
 
 .active {
     background: rgba(255,255,255,0.2);
     color: #FFF;
+    text-decoration: none;
+}
+
+.sidebar-nav > li > a {
+    color: #B3B3B3;
     text-decoration: none;
 }
 
@@ -136,20 +133,10 @@ hr {
     text-decoration: none;
 }
 
-.sidebar-nav > li > div > div > a {
-    color: #F4B5A4;
-    display: block;
-    font-size: 12px;
-    height: 60px;
-    padding-left: 35px;
-    padding-top: 10px;
-    text-decoration: none;
-}
-
-.sidebar-nav > li > div > div > a:hover {
-    background: none;
-    color: #FFF;
-    text-decoration: none;
+.sidebar-nav > li > a > i {
+    margin-right: 15px;
+    margin-top: -4px;
+    vertical-align: middle;
 }
 
 .sidebar-brand {
@@ -188,21 +175,20 @@ hr {
     text-decoration: none;
 }
 
-.sidebar-nav > li > a > i {
-    margin-right: 15px;
-    margin-top: -4px;
-    vertical-align: middle;
-}
-
 .sidebar-footer {
     bottom: 0px;
     position: absolute;
-    line-height: 40px;
-    text-indent: 20px;
+}
+
+@media only screen and (max-height: 543px) {
+    .sidebar-footer {
+        bottom: 0px !important;
+        position: relative;
+    }
 }
 
 .sidebar-footer > div {
-    border-top: 0.3px solid white;
+    border-top: 0.3px solid #B3B3B3;
     height: 60px;
     width: 250px;
 }
@@ -217,11 +203,11 @@ hr {
 
 .sidebar-footer > div > a {
     background:none;
-    color: #FFF;
+    color: #B3B3B3;
     float: left;
+    margin-left: 10px;
+    margin-top: 25px;
     font-size: 12px;
-    margin-left: -10px;
-    margin-top: 10px;
     text-decoration: none;
 }
 
@@ -269,6 +255,7 @@ hr {
 
 /*--- /Content ---*/
 
+
 /*----- Dashboard Page -----*/
 
 .cardDashboardSub {
@@ -284,8 +271,31 @@ hr {
         height: 250px;
     }
 }
-/*----- /Dashboard Page -----*/
 
+.cardDashboardCover {
+    background-color: #FFFFFF;
+    height: auto;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.cardDashboardCover > div > div > h4 {
+    color: #F15A34;
+}
+
+.imageCoverage {
+    width: 25%;
+}
+
+@media only screen and (max-width: 767px) {
+    .cardDashboardSub {
+        height: 250px;
+    }
+}
+
+/*----- /Dashboard Page -----*/
 /*----- All Subscribers Page -----*/
 /*--- Search ---*/
 .form-group > div > i {
@@ -586,9 +596,9 @@ hr {
     background-color: #f0f0f0;
     border: 0px;
     font-size: 14px;
-    height: 70px;
+    height: 45px;
     margin: 0;
-    padding: 22px 0px 26px 5px;
+    padding: 0px 0px 0px 5px;
     width: 100%;
 }
 
@@ -699,9 +709,9 @@ hr {
     border: none;
     border-radius: 0px;
     font-size:14px;
-    height: 70px;
+    height: 45px;
     margin: 0 0 20px 0;
-    padding: 22px 0px 26px 20px;
+    padding: 0px 0px 0x 20px;
     width: 100%;
 }
 
@@ -881,11 +891,6 @@ hr {
     margin-right: 15px;
 }
 
-.margin10White {
-    margin-bottom: 10px;
-    color: #FFF;
-}
-
 .font100Margin30 {
     font-size: 100px !important;
     margin-top: 30px;
@@ -895,8 +900,7 @@ hr {
     margin-top: 40px;
 }
 
-.marginBL10White {
-    color: #FFF;
+.marginBL10 {
     margin-bottom: 10px;
     margin-left: 10px;
 }
@@ -918,6 +922,10 @@ hr {
 
 .paddingL35 {
     padding-left: 35px;
+}
+
+.paddingL10 {
+    padding-left: 10px;
 }
 
 .linkViewAll {
@@ -1063,9 +1071,9 @@ button.buttonOrange:active {
     border: none;
     border-radius: 0px;
     font-size:14px;
-    height: 70px;
+    height: 45px;
     margin: 0 0 20px 0;
-    padding: 22px 0px 26px 20px;
+    padding: 0px 0px 0px 20px;
     width: 100%;
 }
 
@@ -1093,7 +1101,19 @@ button.buttonOrange:active {
 }
 
 .paddingT20 {
-    padding-top: 20px                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+    padding-top: 20px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+}
+
+.paddingT25 {
+    padding-top: 25px;
+}
+
+.paddingT30 {
+    padding-top: 30px;
+}
+
+.paddingT15 {
+    padding-top: 15px;
 }
 
 .marginT20 {
