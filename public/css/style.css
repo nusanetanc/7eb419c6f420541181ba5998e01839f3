@@ -43,7 +43,7 @@ body{
     background-image: url("../images/all-entertainment.jpg");
     background-position:center;
     background-size:cover;
-    color: #fff;
+    color: #FC592E;
     margin-bottom: 0px;
     margin-top: 35px;
 }
@@ -925,7 +925,7 @@ margin-bottom: 20px;
     .wall-title {
         font-size: 28px;
     }
-    
+
     .wall-content-hashtag{
         font-size:35px;
         padding:80px 0 85px 0;
