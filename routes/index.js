@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var api = express.Router();
+var nodemailer = require("nodemailer");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,6 +11,16 @@ api.get('/', function(req, res, next) {
   res.render('homepage', { title: 'Groovy - Home' });
 });
 
+router.get('/send',function(req,res){
+  var smtpTransport = nodemailer.createTransport({
+      service: "gmail",
+      host: "smtp.gmail.com",
+      auth: {
+          user: "nurhandiy@gmail.com",
+          pass: "yudiganteng"
+      }
+  });
+});
 
 router.get('/features', function(req, res, next) {
   res.render('features', { title: 'Groovy - Features' });

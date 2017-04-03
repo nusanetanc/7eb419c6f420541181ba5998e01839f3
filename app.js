@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var nodemailer = require("nodemailer");
 
 var index = require('./routes/index');
 
@@ -32,16 +31,6 @@ app.use(function(req, res, next) {
 
 app.use('/', index);
 
-app.get('/send',function(req,res){
-  var smtpTransport = nodemailer.createTransport({
-      service: "gmail",
-      host: "smtp.gmail.com",
-      auth: {
-          user: "nurhandiy@gmail.com",
-          pass: "yudiganteng"
-      }
-  });
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
