@@ -17,6 +17,8 @@ var smtpTransport = nodemailer.createTransport({
     }
 });
 
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('homepage', { title: 'Groovy - Home' });
@@ -27,7 +29,7 @@ api.get('/', function(req, res, next) {
 
 router.get('/send',function(req,res, next){
   var mailOptions={
-   to : "nurhandiy@ymail.com",
+   to : "req.query.to",
    subject : "req.query.subject",
    text : "req.query.text"
 }
