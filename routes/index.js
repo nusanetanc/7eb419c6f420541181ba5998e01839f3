@@ -2,14 +2,15 @@ var express = require('express');
 var router = express.Router();
 var api = express.Router();
 var nodemailer = require("nodemailer");
+var smtpTransport = require('nodemailer-smtp-transport');
 
-var smtpTransport = nodemailer.createTransport({
+var smtpTransport = nodemailer.createTransport(smtpTransport({
     service: "gmail",
     auth: {
         user: "nurhandiy@gmail.com",
         pass: "yudiganteng"
     }
-});
+}));
 console.log('created');
 
 /* GET home page. */
