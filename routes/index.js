@@ -29,9 +29,9 @@ api.get('/', function(req, res, next) {
 
 router.get('/send',function(req,res, next){
   var mailOptions={
-   to : "req.query.to",
-   subject : "req.query.subject",
-   text : "req.query.text"
+   to : req.query.to,
+   subject : req.query.subject,
+   text : req.query.text
 }
   console.log(mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
