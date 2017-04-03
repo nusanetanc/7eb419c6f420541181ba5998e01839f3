@@ -87,8 +87,8 @@
                             <textarea class="form-control contact-input-textarea" placeholder="Message here" id="inputMessage"/></textarea>
                         </div>
                         <div class="form-group">
-                            <button class="btn contact-send-button" type="submit">Send</button>
-                            <input type="button" value="Click!" onClick="sendMail()">
+                            <button class="btn contact-send-button" type="submit" id="send_email">Send</button>
+                            <span id="message"></span>
                         </div>
                     </form>
                 </div>
@@ -149,6 +149,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 
+<!--
 <script type="text/javascript">
 function sendMail(){
   $.ajax({
@@ -172,7 +173,6 @@ function sendMail(){
   });
   }
 </script>
-<!--
 <script type="text/javascript">
    (function(){
       emailjs.init("user_Fo1PvferrDlCsRVhx1s5B");
@@ -208,5 +208,25 @@ $('#contact-form').submit(function(e){
 })
 </script>
 -->
+<script>
+$(document).ready(function(){
+    var from,to,subject,text;
+    $("#send_email").click(function(){
+        to=$("#inputEmail").val();
+        subject=$("#inputName").val();
+        text=$("#inputMessage").val();
+        $("#message").text("Sending E-mail...Please wait");
+        $.get("https://groovyfroendend-nurhandiyudi.c9users.io/send",{to:to,subject:subject,text:text},function(data){
+        if(data=="sent")
+        {
+            $("#message").empty().html("
+
+Email is been sent at "+to+" . Please check inbox!");
+        }
+
+});
+    });
+});
+</script>
 </body>
 </html>
