@@ -5,9 +5,12 @@ var nodemailer = require("nodemailer");
 
 var smtpTransport = nodemailer.createTransport({
     service: "nusa.net.id",
-    host: "smtp.nusa.net.id",
+    pool: true,
+    host: 'smtp.gmail.com', // Gmail as mail client
+    port: 587,
+    secure: false, // use SSL
     auth: {
-        user: "yudi.nurhandi@nusa.net.id",
+        user: "nurhandiy@gmail.com",
         pass: "yudiganteng"
     }
 });
