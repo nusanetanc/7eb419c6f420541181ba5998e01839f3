@@ -27,11 +27,29 @@ api.get('/', function(req, res, next) {
   res.render('homepage', { title: 'Groovy - Home' });
 });
 
-router.get('/send',function(req,res, next){
+router.get('/send-contact',function(req,res, next){
   var mailOptions={
     to: "nurhandiy@ymail.com",
    subject : "Contact Web Groovy",
    text : "nama : "+req.query.name+", email : "+req.query.email+", Message: "+req.query.message
+}
+  console.log(mailOptions);
+  smtpTransport.sendMail(mailOptions, function(error, response){
+  if(error){
+  console.log(error);
+  res.end("error");
+  }else{
+  console.log("Message sent: " + response.message);
+  res.end("sent");
+  }
+  });
+});
+
+router.get('/add-subs',function(req,res, next){
+  var mailOptions={
+    to: "nurhandiy@ymail.com",
+   subject : "Add Subscribe Web Groovy",
+   text : "nama : "+req.query.name+", email : "+req.query.email+", phone : "+req.query.hp+", alamat: "+req.query.address
 }
   console.log(mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
