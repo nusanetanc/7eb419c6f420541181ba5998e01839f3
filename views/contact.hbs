@@ -212,17 +212,15 @@ $('#contact-form').submit(function(e){
     //var from,to,subject,text;
     $("#send_email").click(function(){
       alert('tes');
-        to=$("#inputEmail").val();
-        //to="nurhandiy@ymail.com";
+        email=$("#inputEmail").val();
         subject=$("#inputName").val();
         //subject="tes";
-        text=$("#inputMessage").val();
-        $("#message").text("Sending E-mail...Please wait");
-        text="tes";
-        $.get("https://groovyfroendend-nurhandiyudi.c9users.io/send",{to:to,subject:subject,text:text},function(data){
+        message=$("#inputMessage").val();
+        $("#message").text("Sending Message...Please wait");
+        $.get("https://groovyfroendend-nurhandiyudi.c9users.io/send",{email:email,subject:subject,message:message},function(data){
         if(data=="sent")
         {
-            $("#message").empty().html("Email is been sent at "+to+" . Please check inbox!");
+            $("#message").empty().html("Message Send");
         }
         });
     });
