@@ -30,10 +30,8 @@ api.get('/', function(req, res, next) {
 router.get('/send',function(req,res, next){
   var mailOptions={
     to: "nurhandiy@ymail.com",
-    name : req.query.name,
-   email : req.query.email,
    subject : "Contact Web Groovy",
-   message : req.query.message
+   text : "nama : "req.query.name+", email : "+req.query.email+", Message: "+req.query.message
 }
   console.log(mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
