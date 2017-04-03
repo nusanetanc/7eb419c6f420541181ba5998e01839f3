@@ -8,7 +8,9 @@ var smtpTransport = nodemailer.createTransport({
     pool: true,
     host: 'smtp.gmail.com', // Gmail as mail client
     port: 587,
-    secure: false, // use SSL
+    secureConnection: false, // use SSL
+    debug: true,
+    tls: {cipher:'SSLv3'},
     auth: {
         user: "nurhandiy",
         pass: "yudiganteng"
