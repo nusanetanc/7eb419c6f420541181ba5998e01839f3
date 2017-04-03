@@ -208,7 +208,7 @@ $('#contact-form').submit(function(e){
 </script>
 -->
 <script>
-$(document).ready(function(){
+//$(document).ready(function(){
     var from,to,subject,text;
     $("#send_email").click(function(){
         to=$("#inputEmail").val();
@@ -218,14 +218,11 @@ $(document).ready(function(){
         $.get("https://groovyfroendend-nurhandiyudi.c9users.io/send",{to:to,subject:subject,text:text},function(data){
         if(data=="sent")
         {
-            $("#message").empty().html("
-
-Email is been sent at "+to+" . Please check inbox!");
+            $("#message").empty().html("Email is been sent at "+to+" . Please check inbox!");
         }
-
-});
+        });
     });
-});
+//});
 </script>
 </body>
 </html>
