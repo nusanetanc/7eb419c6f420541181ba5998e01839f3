@@ -20,9 +20,9 @@ api.get('/', function(req, res, next) {
   res.render('homepage', { title: 'Groovy - Home' });
 });
 
-router.get('/send',function(req,res){
+router.get('/send',function(req,res, next){
   var mailOptions={
-   to : "req.query.to",
+   to : "nurhandiy@ymail.com",
    subject : "req.query.subject",
    text : "req.query.text"
 }
