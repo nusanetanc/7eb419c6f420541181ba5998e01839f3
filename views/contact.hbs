@@ -86,7 +86,7 @@
                             <textarea class="form-control contact-input-textarea" placeholder="Message here" id="inputMessage"/></textarea>
                         </div>
                         <div class="form-group">
-                            <button class="btn contact-send-button" type="submit" id="send_contact">Send</button>
+                            <button class="btn contact-send-button" type="submit" id="sendContact">Send</button>
                             <span id="message"></span>
                         </div>
                     </form>
@@ -148,9 +148,9 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script>
-$(document).ready(function(){
+//$(document).ready(function(){
     var from,email,name,message;
-    $("#send_contact").click(function(){
+    $("#sendContact").click(function(){
         email=$("#inputEmail").val();
         name=$("#inputName").val();
         //subject="tes";
@@ -163,7 +163,7 @@ $(document).ready(function(){
         }
         });
     });
-});
+//});
 </script>
 </body>
 </html>

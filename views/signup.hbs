@@ -63,7 +63,7 @@
                 </form>
             </div>
             <div class="col-md-4 col-md-offset-4">
-              <button class="btn contact-send-button" type="submit" id="send_signup">SUBMIT</button>
+              <button class="btn contact-send-button" type="submit" id="sendSignup">SUBMIT</button>
               <span id="message"></span>
             </div>
         </div>
@@ -125,12 +125,11 @@
 <script>
 $(document).ready(function(){
     var from,email,hp,name,address;
-    $("#send_signup").click(function(){
+    $("#sendSignup").click(function(){
       alert('tes');
         email=$("#inputEmail").val();
         hp=$("#inputHp").val();
         name=$("#inputName").val();
-        //subject="tes";
         address=$("#InputAddress").val();
         $("#message").text("Sending Message...Please wait");
         $.get("/add-subs",{email:email,hp:hp,name:name,address:address},function(data){
