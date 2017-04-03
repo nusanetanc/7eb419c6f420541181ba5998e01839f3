@@ -147,6 +147,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_Fo1PvferrDlCsRVhx1s5B");
+   })();
+   var service_id = 'my_mandrill';
+   var template_id = 'feedback';
+   var template_params = {
+   name: 'John',
+   reply_email: 'john@doe.com',
+   message: 'This is awesome!'
+   };
+
+   emailjs.send(service_id,template_id,template_params);
+</script>
+<!--
 <script>
 $('#contact-form').submit(function(e){
   var name = document.getElementById('inputName'),
@@ -167,5 +183,6 @@ $('#contact-form').submit(function(e){
   }
 })
 </script>
+-->
 </body>
 </html>
