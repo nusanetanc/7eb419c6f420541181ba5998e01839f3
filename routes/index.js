@@ -5,12 +5,12 @@ var nodemailer = require("nodemailer");
 
 var smtpTransport = nodemailer.createTransport({
     service: "gmail",
-    host: "smtp.gmail.com",
     auth: {
         user: "nurhandiy@gmail.com",
         pass: "yudiganteng"
     }
 });
+console.log('created');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
