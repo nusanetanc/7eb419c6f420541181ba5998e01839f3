@@ -16,6 +16,10 @@
 
     <!-- Style css -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- JQuery -->
+    <script src="./js/send.mail.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top navbar-homepage">
@@ -73,21 +77,21 @@
                     <p>We're here to help when you need us and we're ready to answer your questions. You can also send as an email, and we'll answer within 24 hours</p>
                 </div>
                 <div class="col-sm-12">
-                    <form action="mailto:nurhandiy@gmail.com" method="post" enctype="text/plain">
+                    <form id="contact-form" method="post" enctype="text/plain">
                         <div class="form-group">
                             <span class="contact-input-text">Your Name</span>
-                            <input class="form-control contact-input" type="text" placeholder="Name"/>
+                            <input class="form-control contact-input" type="text" placeholder="Name" id="inputName"/>
                         </div>
                         <div class="form-group">
                             <span class="contact-input-text">Your Email</span>
-                            <input class="form-control contact-input" type="text" placeholder="Email"/>
+                            <input class="form-control contact-input" type="text" placeholder="Email" id="inputEmail"/>
                         </div>
                         <div class="form-group">
                             <span class="contact-input-text">Message</span>
-                            <textarea class="form-control contact-input-textarea" placeholder="Message here"/></textarea>
+                            <textarea class="form-control contact-input-textarea" placeholder="Message here" id="inputMessage"/></textarea>
                         </div>
                         <div class="form-group">
-                            <input class="btn contact-send-button" onclick="SendMail()" name="submit" id="submit" type="button" value="Send">
+                            <input class="btn contact-send-button" name="submit" id="submit" type="button" value="Send">
                         </div>
                     </form>
                 </div>
