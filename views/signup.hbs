@@ -128,13 +128,13 @@ $(document).ready(function(){
     $("#send_subs").click(function(){
         email=$("#inputEmail").val();
         hp=$("#inputHp").val();
-        name=$("#inputName").val();
+        name="dsfjasdkl"
         address=$("#InputAddress").val();
         $("#message").text("Sending Message...Please wait");
         $.get("/add-subs",{email:email,hp:hp,name:name,address:address},function(data){
         if(data=="sent")
         {
-            $("#message").empty().html("Message Send");
+            $("#message").empty().html("Request Subscribe Send");
         }
         });
     });
