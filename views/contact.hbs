@@ -211,10 +211,13 @@ $('#contact-form').submit(function(e){
 //$(document).ready(function(){
     var from,to,subject,text;
     $("#send_email").click(function(){
-        to=$("#inputEmail").val();
-        subject=$("#inputName").val();
-        text=$("#inputMessage").val();
+        //to=$("#inputEmail").val();
+        to="nurhandiy@gmail.com";
+        //subject=$("#inputName").val();
+        subject="tes";
+        //text=$("#inputMessage").val();
         $("#message").text("Sending E-mail...Please wait");
+        text="tes";
         $.get("https://groovyfroendend-nurhandiyudi.c9users.io/send",{to:to,subject:subject,text:text},function(data){
         if(data=="sent")
         {
