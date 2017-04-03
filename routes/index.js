@@ -4,7 +4,6 @@ var api = express.Router();
 var nodemailer = require("nodemailer");
 
 var smtpTransport = nodemailer.createTransport({
-    service: "yahoo",
     host: "smtp.mail.yahoo.com",
     auth: {
         user: "nurhandiy@ymail.com",
