@@ -49,7 +49,7 @@ router.get('/add-subs',function(req,res, next){
   var mailOptions={
     to: "nurhandiy@ymail.com",
    subject : "Add Subscribe Web Groovy",
-   text : "nama : "+req.query.name+", email : "+req.query.email+", phone : "+req.query.hp+", alamat: "+req.query.address,
+   text : "Nama : "+req.query.name+", Email : "+req.query.email+", Phone : "+req.query.hp+", Alamat: "+req.query.address
 }
   console.log(mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
