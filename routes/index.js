@@ -11,7 +11,7 @@ var smtpTransport = nodemailer.createTransport({
     secure: false, // use SSL
     auth: {
         user: "nurhandiy@gmail.com",
-        pass: "yudiganteng"
+        password: "yudiganteng"
     }
 });
 
