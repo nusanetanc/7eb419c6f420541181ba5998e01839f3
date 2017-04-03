@@ -86,7 +86,7 @@
                             <textarea class="form-control contact-input-textarea" placeholder="Message here" id="inputMessage"/></textarea>
                         </div>
                         <div class="form-group">
-                            <button class="btn contact-send-button" type="submit" id="sendContact">Send</button>
+                            <button class="btn contact-send-button" type="submit" id="send_email">Send</button>
                             <span id="message"></span>
                         </div>
                     </form>
@@ -144,13 +144,73 @@
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+
+<!--
+<script type="text/javascript">
+function sendMail(){
+  $.ajax({
+    type: "POST",
+    url: "https://mandrillapp.com/api/1.0/messages/send.json",
+    data: {
+      'key': 'YOUR_KEY',
+      'message': {
+        'from_email': 'nurhandiy@gmail.com',
+        'to': [
+          {
+            'email': 'YOUR_RECEIVER@example.com',
+            'name': 'YOUR_RECEIVER_NAME',
+            'type': 'to'
+          }
+        ],
+        'subject': 'title',
+        'html': 'html can be used'
+      }
+    }
+  });
+  }
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_Fo1PvferrDlCsRVhx1s5B");
+   })();
+   var service_id = 'my_mandrill';
+   var template_id = 'feedback';
+   var template_params = {
+   name: 'John',
+   reply_email: 'john@doe.com',
+   message: 'This is awesome!'
+   };
+
+   emailjs.send(service_id,template_id,template_params);
+</script>
 <script>
-//$(document).ready(function(){
+$('#contact-form').submit(function(e){
+  var name = document.getElementById('inputName'),
+      email = document.getElementById('inputEmail'),
+      message = document.getElementById('inputMessage');
+  if(!name.value || !email.value || !message.value ){
+    alertify.console.error('Please check your entries')
+  } else {
+    $.ajax({
+    url: "https://formspree.io/nurhandiy@gmail.com",
+    method: "POST",
+    data: $(this).serialize(),
+    dataType: "json"
+    });
+    e.preventDefault()
+    $(this).get(0).reset()
+    alertify.success('Message Send')
+  }
+})
+</script>
+-->
+<script>
+$(document).ready(function(){
     var from,email,name,message;
-    $("#sendContact").click(function(){
+    $("#send_email").click(function(){
         email=$("#inputEmail").val();
         name=$("#inputName").val();
         //subject="tes";
@@ -163,7 +223,7 @@
         }
         });
     });
-//});
+});
 </script>
 </body>
 </html>
