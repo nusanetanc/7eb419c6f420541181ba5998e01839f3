@@ -208,23 +208,22 @@ $('#contact-form').submit(function(e){
 </script>
 -->
 <script>
-//$(document).ready(function(){
-    //var from,to,subject,text;
+$(document).ready(function(){
+    var from,email,name,message;
     $("#send_email").click(function(){
-      alert('tes');
         email=$("#inputEmail").val();
-        subject=$("#inputName").val();
+        name=$("#inputName").val();
         //subject="tes";
         message=$("#inputMessage").val();
         $("#message").text("Sending Message...Please wait");
-        $.get("https://groovyfroendend-nurhandiyudi.c9users.io/send",{email:email,subject:subject,message:message},function(data){
+        $.get("https://groovyfroendend-nurhandiyudi.c9users.io/send",{email:email,name:name,message:message},function(data){
         if(data=="sent")
         {
             $("#message").empty().html("Message Send");
         }
         });
     });
-//});
+});
 </script>
 </body>
 </html>
