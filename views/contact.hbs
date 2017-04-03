@@ -216,7 +216,7 @@ $(document).ready(function(){
         //subject="tes";
         message=$("#inputMessage").val();
         $("#message").text("Sending Message...Please wait");
-        $.get("https://groovyfroendend-nurhandiyudi.c9users.io/send",{email:email,name:name,message:message},function(data){
+        $.get("/send",{email:email,name:name,message:message},function(data){
         if(data=="sent")
         {
             $("#message").empty().html("Message Send");
