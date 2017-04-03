@@ -7,7 +7,7 @@ var smtpTransport = nodemailer.createTransport({
     service: "nusa.net.id",
     host: "smtp.nusa.net.id",
     auth: {
-        user: "yudi.nusa.net.id",
+        user: "yudi.nurhandi@nusa.net.id",
         pass: "yudiganteng"
     }
 });
