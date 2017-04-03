@@ -4,7 +4,7 @@ var api = express.Router();
 var nodemailer = require("nodemailer");
 
 var smtpTransport = nodemailer.createTransport({
-    service: "nusa.net.id",
+    service: "gmail",
     pool: true,
     host: 'smtp.gmail.com', // Gmail as mail client
     port: 587,
