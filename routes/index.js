@@ -2,7 +2,15 @@ var express = require('express');
 var router = express.Router();
 var api = express.Router();
 var nodemailer = require("nodemailer");
-var smtpTransport = require('nodemailer-smtp-transport');
+
+var smtpTransport = nodemailer.createTransport({
+    service: "gmail",
+    host: "smtp.mail.yahoo.com",
+    auth: {
+        user: "nurhandiy@ymail.com",
+        pass: "nusanet123456789"
+    }
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,14 +21,6 @@ api.get('/', function(req, res, next) {
 });
 
 router.get('/send',function(req,res, next){
-  var smtpTransport = nodemailer.createTransport(smtpTransport({
-      service: "gmail",
-      auth: {
-          user: "nurhandiy@gmail.com",
-          pass: "yudiganteng"
-      }
-  }));
-
   var mailOptions={
    to : "nurhandiy@ymail.com",
    subject : "req.query.subject",
