@@ -16,29 +16,6 @@
 
     <!-- Style css -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <!-- JQuery -->
-    <script>
-    $('#contact-form').submit(function(e){
-      var name = document.getElementById('inputName'),
-          email = document.getElementById('inputEmail'),
-          message = document.getElementById('inputMessage');
-      if(!name.value || !email.value || !message.value ){
-        alertify.console.error('Please check your entries')
-      } else {
-        $.ajax({
-        url: "https://formspree.io/nurhandiy@gmail.com",
-        method: "POST",
-        data: $(this).serialize(),
-        dataType: "json"
-        });
-        e.preventDefault()
-        $(this).get(0).reset()
-        alertify.success('Message Send')
-      }
-    })
-    </script>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top navbar-homepage">
@@ -170,5 +147,25 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script>
+$('#contact-form').submit(function(e){
+  var name = document.getElementById('inputName'),
+      email = document.getElementById('inputEmail'),
+      message = document.getElementById('inputMessage');
+  if(!name.value || !email.value || !message.value ){
+    alertify.console.error('Please check your entries')
+  } else {
+    $.ajax({
+    url: "https://formspree.io/nurhandiy@gmail.com",
+    method: "POST",
+    data: $(this).serialize(),
+    dataType: "json"
+    });
+    e.preventDefault()
+    $(this).get(0).reset()
+    alertify.success('Message Send')
+  }
+})
+</script>
 </body>
 </html>
