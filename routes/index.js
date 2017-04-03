@@ -4,10 +4,11 @@ var api = express.Router();
 var nodemailer = require("nodemailer");
 
 var smtpTransport = nodemailer.createTransport({
-    host: "smtp.mail.yahoo.com",
+    service: "nusa.net.id",
+    host: "smtp.nusa.net.id",
     auth: {
-        user: "nurhandiy@ymail.com",
-        pass: "nusanet123456789"
+        user: "yudi.nusa.net.id",
+        pass: "yudiganteng"
     }
 });
 
