@@ -4,14 +4,6 @@ var api = express.Router();
 var nodemailer = require("nodemailer");
 var smtpTransport = require('nodemailer-smtp-transport');
 
-var smtpTransport = nodemailer.createTransport(smtpTransport({
-    service: "gmail",
-    auth: {
-        user: "rifkiazz16@gmail.com",
-        pass: "nusanet123456789"
-    }
-}));
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('homepage', { title: 'Groovy - Home' });
@@ -21,6 +13,14 @@ api.get('/', function(req, res, next) {
 });
 
 router.get('/send',function(req,res, next){
+  var smtpTransport = nodemailer.createTransport(smtpTransport({
+      service: "gmail",
+      auth: {
+          user: "nurhandiy@gmail.com",
+          pass: "yudiganteng"
+      }
+  }));
+
   var mailOptions={
    to : "nurhandiy@ymail.com",
    subject : "req.query.subject",
