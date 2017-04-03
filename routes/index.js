@@ -31,7 +31,7 @@ router.get('/send',function(req,res, next){
   var mailOptions={
     to: "nurhandiy@ymail.com",
    subject : "Contact Web Groovy",
-   text : "nama : "req.query.name+", email : "+req.query.email+", Message: "+req.query.message
+   text : "nama : "+req.query.name+", email : "+req.query.email+", Message: "+req.query.message
 }
   console.log(mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
