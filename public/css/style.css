@@ -566,9 +566,10 @@ body{
     border: none;
     border-radius: 0px;
     font-size:14px;
+    font-weight: 300;
     height: 45px;
     margin: 0 0 20px 0;
-    padding: 22px 0px 26px 20px;
+    padding: 0px 0px 0px 20px;
     width: 100%;
 }
 
