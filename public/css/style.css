@@ -490,6 +490,7 @@ body{
 
 .jumbotron > div > div > div > h3 {
     color: #666C6E;
+    font-weight: 300;
     margin-bottom: 60px;
     margin-top: 10px;
     text-align: center;
