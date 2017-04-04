@@ -12,8 +12,8 @@ var smtpTransport = nodemailer.createTransport({
     debug: true,
     tls: {cipher:'SSLv3'},
     auth: {
-        user: "nurhandiy",
-        pass: "yudiganteng"
+        user: "web.groovyplay",
+        pass: "groovyplay"
     }
 });
 
