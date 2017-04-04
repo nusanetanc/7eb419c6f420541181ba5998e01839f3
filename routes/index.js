@@ -29,7 +29,7 @@ api.get('/', function(req, res, next) {
 
 router.get('/send-contact',function(req,res, next){
   var mailOptions={
-    to: "nurhandiy@ymail.com",
+    to: "cs@groovy.id",
    subject : "Contact Web Groovy",
    text : "nama : "+req.query.name+", email : "+req.query.email+", Message: "+req.query.message
 }
@@ -47,7 +47,7 @@ router.get('/send-contact',function(req,res, next){
 
 router.get('/add-subs',function(req,res, next){
   var mailOptions={
-    to: "nurhandiy@ymail.com",
+    to: "cs@groovy.id",
    subject : "Add Subscribe Web Groovy",
    text : "Nama : "+req.query.name+", Email : "+req.query.email+", Phone : "+req.query.hp+", Alamat: "+req.query.address
 }
