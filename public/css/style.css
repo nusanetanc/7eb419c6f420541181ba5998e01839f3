@@ -953,3 +953,26 @@ body{
         font-size: 15px !important;
     }
 }
+
+/*--- Modals Event ---*/
+.item > img {
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.modal-header {
+    padding: 5px 10px !important;
+}
+
+.carousel-control-left {
+    color: #FC592E;
+    opacity: inherit !important;
+}
+
+.carousel-control-right {
+    color: #FC592E;
+    opacity: inherit !important;
+    right: 0;
+    left: auto;
+}
+/*--- Modals Event ---*/
