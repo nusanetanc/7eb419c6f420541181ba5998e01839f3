@@ -100,7 +100,7 @@ router.get('/contact', function(req, res, next) {
 });
 
 router.get('/privacy-policy', function(req, res, next) {
-  res.render('privacy-policy', { title: 'Groovy - Privacy-policy' });
+  res.render('coming-soon', { title: 'Groovy - Privacy-policy' });
 });
 
 router.get('/career', function(req, res, next) {
