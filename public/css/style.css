@@ -724,10 +724,12 @@ body{
 }
 
 .support-content-header{
+    font-weight: 300;
     opacity: 0.9;
 }
 
 .support-content-text{
+    font-weight: 300;
     opacity: 0.9;
     font-size: 15px;
 }
