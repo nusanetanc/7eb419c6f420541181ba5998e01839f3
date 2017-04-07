@@ -65,6 +65,16 @@ body{
     
 }
 
+@media only screen and (max-width : 1199px){
+    
+    .wb {
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+    
+}
+
+
 .wall-home-text{
     margin-top: -10px;
     margin-bottom: 25px;
