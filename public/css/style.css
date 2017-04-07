@@ -40,7 +40,7 @@ body{
 /*----------------------Content-----------------------------*/
 .wall-home{
     height:500px;
-    background-image: url("../images/all-entertainment.jpg");
+    background-color: #C4DDE2;
     background-position:center;
     background-size:cover;
     color: #333333;
