@@ -52,13 +52,13 @@ body{
     margin-top: 120px;
 }
 
-.wb.img {
+.wb {
     margin-left: 30px;    
 }
 
 @media only screen and (max-width : 991px){
     
-    .wb.img {
+    .wb {
         margin-left: 0px;
         margin-top: 40px;
     }
